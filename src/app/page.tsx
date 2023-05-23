@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from '../styles/home.module.scss';
 import logo from '../../public/logo.svg';
@@ -20,7 +21,9 @@ export default function Home() {
           <Input placeholder='Sua senha' type='password' />
           <Button type="submit" loading={true}>Acessar</Button>
         </form>
-        <a className={styles.text}>Não possui uma conta? Cadastre-se</a>
+        <Link href="/signup" className={styles.text}>
+          Não possui uma conta? Cadastre-se
+        </Link>
       </div>
     </div>
   )
